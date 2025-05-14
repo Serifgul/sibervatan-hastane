@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden mb-6;
+  }
+
+  .card-header {
+    @apply bg-gray-50 px-6 py-4 border-b border-gray-200;
+  }
+
+  .card-title {
+    @apply font-bold text-lg text-gray-800;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  /* Button styles */
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200 flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white;
+  }
+
+  /* Form styles */
+  .form-input {
+    @apply px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  /* Alert styles */
+  .alert {
+    @apply p-4 rounded-md border mb-4;
+  }
+
+  .alert-success {
+    @apply bg-green-50 border-green-200 text-green-700;
+  }
+
+  .alert-danger {
+    @apply bg-red-50 border-red-200 text-red-700;
+  }
+
+  /* Table styles */
+  .table-container {
+    @apply overflow-x-auto;
+  }
+
+  .table {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+
+  .table thead {
+    @apply bg-gray-50;
+  }
+
+  .table th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+
+  .table td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+  }
+
+  /* Log viewer styles */
+  .log-viewer {
+    @apply font-mono text-sm bg-gray-50 p-4 rounded-md h-64 overflow-y-auto;
+  }
+
+  .log-entry {
+    @apply mb-1 pb-1 border-b border-gray-100 last:border-0;
+  }
+
+  .log-date {
+    @apply text-gray-500 inline-block;
+  }
+
+  .log-success {
+    @apply text-green-600 font-semibold;
+  }
+
+  .log-error {
+    @apply text-red-600 font-semibold;
+  }
+}
